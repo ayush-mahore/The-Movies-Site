@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% load static %}
+
+        <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/day.css' %}"
+    />
+
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.min.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/about-us.css' %}"
+    />
+ 
+  
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/framework.css' %}"
+    />
+   
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/text.css' %}"
+    />
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/loader.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/popupc.css' %}"
+    />
+
+    <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/trending_info.js' %}"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+  </head>
+
+  <div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <!-- Navbar brand -->
+        
+
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#basicExampleNav"
+          aria-controls="basicExampleNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="##"></a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">Trending Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/trending_tv">Trending TV Shows</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link"href="/contact">Contact Me</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+      </div>
+    </nav>
+    <!--/.Navbar-->
+  </div>
+
+    <body style= " background: rgb(195, 123, 255);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(195, 123, 255, 1) 0%,
+    rgba(131, 180, 237, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(195, 123, 255, 1) 0%,
+    rgba(131, 180, 237, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(195, 123, 255, 1) 0%,
+    rgba(131, 180, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c37bff",endColorstr="#83b4ed",GradientType=1);">
+          
+<br><br><br><br>
+
+
+
+ <!--1st movie-->
+<div id="a" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closea()">&times;</a>
+  <div class="overlay-content">
+     <h2> {{mn1}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd1}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen1}}</h1>
+     <h1>Cast :&nbsp; {{cast1}}, {{cast2}}, {{cast3}}, {{cast4}}, {{cast5}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d1}} 
+     </p>
+  </div>
+</div>
+
+
+<!--2nd movie-->
+<div id="b" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeb()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn2}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd2}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen2}}</h1>
+     <h1>Cast :&nbsp; {{cast6}}, {{cast7}}, {{cast8}}, {{cast9}}, {{cast10}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d2}} 
+     </p>
+  </div>
+</div>
+
+
+<!--3rd movie-->
+<div id="c" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closec()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn3}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd3}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen3}}</h1>
+     <h1>Cast :&nbsp; {{cast11}}, {{cast12}}, {{cast13}}, {{cast14}}, {{cast15}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d3}} 
+  </div>
+</div>
+
+
+<!--4th movie-->
+<div id="d" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closed()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn4}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd4}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen1}}</h1>
+     <h1>Cast :&nbsp; {{cast16}}, {{cast17}}, {{cast18}}, {{cast19}}, {{cast20}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d4}} 
+  </div>
+</div>
+
+
+<!--5th movie-->
+<div id="e" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closee()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn5}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd5}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen5}}</h1>
+     <h1>Cast :&nbsp; {{cast21}}, {{cast22}}, {{cast23}}, {{cast24}}, {{cast25}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d5}} 
+  </div>
+</div>
+
+
+<!--6th movie-->
+<div id="f" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closef()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn6}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd6}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen6}}</h1>
+     <h1>Cast :&nbsp; {{cast26}}, {{cast27}}, {{cast28}}, {{cast29}}, {{cast30}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d6}} 
+  </div>
+</div>
+
+
+<!--7th movie-->
+<div id="g" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeg()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn7}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd7}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen7}}</h1>
+     <h1>Cast :&nbsp; {{cast31}}, {{cast32}}, {{cast33}}, {{cast34}}, {{cast35}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d7}} 
+  </div>
+</div>
+
+
+<!--8th movie-->
+<div id="h" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeh()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn8}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd8}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen8}}</h1>
+     <h1>Cast :&nbsp; {{cast36}}, {{cast37}}, {{cast38}}, {{cast39}}, {{cast40}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d8}} 
+  </div>
+</div>
+
+<!--9th movie-->
+<div id="i" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closei()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn9}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd9}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen9}}</h1>
+     <h1>Cast :&nbsp; {{cast41}}, {{cast42}}, {{cast43}}, {{cast44}}, {{cast45}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d9}} 
+  </div>
+</div>
+
+
+<!--10th movie-->
+<div id="j" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closej()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn10}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd10}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen10}}</h1>
+     <h1>Cast :&nbsp; {{cast46}}, {{cast47}}, {{cast48}}, {{cast49}}, {{cast50}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d10}} 
+  </div>
+</div>
+
+<!--11th movie-->
+<div id="k" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closek()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn11}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd11}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen11}}</h1>
+     <h1>Cast :&nbsp; {{cast51}}, {{cast52}}, {{cast53}}, {{cast54}}, {{cast55}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d11}} 
+  </div>
+</div>
+
+<!--12th movie-->
+<div id="l" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closel()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn12}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd12}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen12}}</h1>
+     <h1>Cast :&nbsp; {{cast56}}, {{cast57}}, {{cast58}}, {{cast59}}, {{cast60}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d12}} 
+  </div>
+</div>
+
+<!--13th movie-->
+<div id="m" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closem()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn13}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd13}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen13}}</h1>
+     <h1>Cast :&nbsp; {{cast61}}, {{cast62}}, {{cast63}}, {{cast64}}, {{cast65}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d13}} 
+  </div>
+</div>
+
+
+<!--14th movie-->
+<div id="n" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closen()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn14}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd14}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen14}}</h1>
+     <h1>Cast :&nbsp; {{cast66}}, {{cast67}}, {{cast68}}, {{cast69}}, {{cast70}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d14}} 
+  </div>
+</div>
+
+
+<!--15th movie-->
+<div id="o" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeo()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn15}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd15}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen15}}</h1>
+     <h1>Cast :&nbsp; {{cast71}}, {{cast72}}, {{cast73}}, {{cast74}}, {{cast75}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d15}} 
+  </div>
+</div>
+
+
+<!--16th movie-->
+<div id="p" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closep()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn16}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd16}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen16}}</h1>
+     <h1>Cast :&nbsp; {{cast76}}, {{cast77}}, {{cast78}}, {{cast79}}, {{cast80}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d16}} 
+  </div>
+</div>
+
+
+<!--17th movie-->
+<div id="q" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeq()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn17}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd17}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen17}}</h1>
+     <h1>Cast :&nbsp; {{cast81}}, {{cast82}}, {{cast83}}, {{cast84}}, {{cast85}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d17}} 
+  </div>
+</div>
+
+
+<!--18th movie-->
+<div id="r" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closer()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn18}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd18}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen18}}</h1>
+     <h1>Cast :&nbsp; {{cast86}}, {{cast87}}, {{cast88}}, {{cast89}}, {{cast90}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d18}} 
+  </div>
+</div>
+
+
+<!--19th movie-->
+<div id="s" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closes()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn19}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd19}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen19}}</h1>
+     <h1>Cast :&nbsp; {{cast91}}, {{cast92}}, {{cast93}}, {{cast94}}, {{cast95}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d19}} 
+  </div>
+</div>
+
+
+<!--20th movie-->
+<div id="t" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closet()">&times;</a>
+  <div class="overlay-content">
+      <h2> {{mn20}} </h2>
+     <h1>Release Date &nbsp; : &nbsp;{{rd20}} </h1>
+     <h1>Genres&nbsp; :&nbsp; {{gen20}}</h1>
+     <h1>Cast :&nbsp; {{cast96}}, {{cast97}}, {{cast98}}, {{cast99}}, {{cast100}}</h1><br><br>
+     <h3>Overview : </h3>  
+    <p>
+     {{d20}} 
+  </div>
+</div>
+
+
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+       <div id="con" class="clear">
+          <section id="about-intro" class="clear">
+          <section id="team">
+          <h2>Trending Movies Now</h2>
+          </br></br><br>
+     
+
+
+          <ul class="clear">           
+            <li class="one_third">
+              <figure><img src={{mu1}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn1}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="opena()">Know more</span>
+                  </p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+              <li class="one_third">
+              <figure><img src={{mu2}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn2}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openb()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu3}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn3}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openc()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu4}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn4}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="opend()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>         
+          
+          <ul class="clear">
+            <li class="one_third">
+              <figure><img src={{mu5}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn5}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="opene()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu6}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn6}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openf()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu7}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn7}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openg()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="one_third">
+              <figure><img src={{mu8}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn8}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openh()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+
+          <ul class="clear">
+            <li class="one_third">
+              <figure><img src={{mu9}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn9}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openi()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu10}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn10}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openj()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu11}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn11}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openk()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="one_third">
+              <figure><img src={{mu12}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn12}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openl()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <ul class="clear">
+            <li class="one_third">
+              <figure><img src={{mu13}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn13}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openm()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu14}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn14}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openn()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu15}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn15}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openo()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="one_third">
+              <figure><img src={{mu16}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn16}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openp()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+
+          <ul class="clear">
+
+             <li class="one_third">
+              <figure><img src={{mu17}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn17}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openq()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+             <li class="one_third">
+              <figure><img src={{mu18}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn18}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="openr()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="one_third">
+              <figure><img src={{mu19}} class = "img-responsive" width = "100%" alt="">
+                <figcaption>
+                  <p class="team_name">{{mn19}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="opens()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="one_third">
+              <figure><img src={{mu20}}  class = "img-responsive" width = "100%"alt="">
+                <figcaption>
+                  <p class="team_name">{{mn20}}</p><br>
+                  <p class="team_title"><span class="btn" onclick="opent()">Know more</span></p>
+                  <p class="team_description">
+                  <div class=" text-center">
+                  </div> </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+           
+          </section>
+          </section>
+        </div>
+
+        <!-- ####################################################################################################### -->
+        </div>
+        <!-- Site footer -->
+
+  </div>
+
+
+
+   </div>
+
+     
+  <!-- Site footer -->
+   
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">•	I here propose a system to  find users movies That they would like.</br>
+            •	I have use an efficient method to discover The recommendations of Movies by Using Similarity Score (SS).</br>
+            •	For the front end I have used HTML + CSS + JS and some custom animation,</br>• as per the back end I hve used Django.</br>
+           
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Technologies Used</h6>
+            <ul class="footer-links">
+              <li><a>Python</a></li>
+              <li><a>Machine Learning</a></li>
+              <li><a>Django</a></li>
+              <li><a>Java Script</a></li>
+              <li><a>TMDB API</a></li>
+              <li><a>HTML</a></li>
+              <li><a>CSS</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="https://js0sz6iaesrssjmgg7qnea-on.drv.tw/www.amanmahore.tk/">My Website</a></li>
+              <li><a href="https://www.linkedin.com/in/aman-mahore-367875176/">LinkedIn</a></li>
+              <li><a href="https://github.com/aman-ash">Github</a></li>
+              <li><a href="https://www.instagram.com/aman_mahore_official/">Instagram</a></li>
+              <li><a href="https://twitter.com/mahore_aman">Twitter</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <p class="copyright-text">Copyright &copy; All Rights Reserved by 
+         <a>AMAN</a>.
+         
+            </p>
+             
+          </div>
+
+        </div>
+      </div>
+</footer>
+
+
+
+</body>
+
+
+</html>
